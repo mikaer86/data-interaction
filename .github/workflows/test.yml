@@ -7,6 +7,10 @@ on:
   jobs:
   test:
   runs-on: ubuntu-latest
-  steps:
+  steps: 
     - uses: actions/checkout@v2
-    - uses: dist/index.js
+    - uses: ./
+
+     with:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          TENOR_TOKEN: ${{secrets.TENOR_TOKEN}}
